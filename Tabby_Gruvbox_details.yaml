@@ -1,0 +1,80 @@
+terminal:
+  searchOptions: {}
+  colorScheme:
+    name: Gruvbox Dark
+    foreground: '#e6d4a3'
+    background: '#1e1e1e'
+    cursor: '#bbbbbb'
+    colors:
+      - '#161819'
+      - '#f73028'
+      - '#aab01e'
+      - '#f7b125'
+      - '#719586'
+      - '#c77089'
+      - '#7db669'
+      - '#faefbb'
+      - '#7f7061'
+      - '#be0f17'
+      - '#868715'
+      - '#cc881a'
+      - '#377375'
+      - '#a04b73'
+      - '#578e57'
+      - '#e6d4a3'
+  fontSize: 16
+  font: Cascadia Code
+  cursor: beam
+  fontWeight: 600
+  fontWeightBold: 900
+  profile: local:default
+  paletteGenerate: true
+  paletteHarmonious: true
+  lightColorScheme:
+    name: Gruvbox Light
+    foreground: '#3c3836'
+    background: '#fbf1c7'
+    cursor: '#3c3836'  # Or '#282828' / '#af3a03'
+    cursorAccent: '#fbf1c7'  # Optional: inverted text color inside block cursor
+    selection: '#ebdbb2'     # Optional: bg1 shade for highlighting text
+    colors:
+      - '#fbf1c7'
+      - '#cc241d'
+      - '#98971a'
+      - '#d79921'
+      - '#458588'
+      - '#b16286'
+      - '#689d6a'
+      - '#7c6f64'
+      - '#928374'
+      - '#9d0006'
+      - '#79740e'
+      - '#b57614'
+      - '#076678'
+      - '#8f3f71'
+      - '#427b58'
+      - '#3c3836'
+  customColorSchemes:
+    - name: Gruvbox Light
+      foreground: '#3c3836'
+      background: '#fbf1c7'
+      cursor: '#3c3836'  # Or '#282828' / '#af3a03'
+      cursorAccent: '#fbf1c7'  # Optional: inverted text color inside block cursor
+      selection: '#ebdbb2'     # Optional: bg1 shade for highlighting text
+      colors:
+        - '#fbf1c7'
+        - '#cc241d'
+        - '#98971a'
+        - '#d79921'
+        - '#458588'
+        - '#b16286'
+        - '#689d6a'
+        - '#7c6f64'
+        - '#928374'
+        - '#9d0006'
+        - '#79740e'
+        - '#b57614'
+        - '#076678'
+        - '#8f3f71'
+        - '#427b58'
+        - '#3c3836'

@@ -1,0 +1,12 @@
+make sure micro, git, etc.. are installed
+make sure brew, fzf, fd, chezmoi are installed
+chezmoi init (or verify already set up)
+
+sudo apt update && sudo apt install -y zsh zsh-autosuggestions zsh-syntax-highlighting
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc --unattended
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+git clone https://github.com/zsh-users/zsh-completions.git "${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions"
+chezmoi update
+exec zsh
+
+if all is well: chsh -s $(which zsh)

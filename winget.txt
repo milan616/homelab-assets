@@ -1,0 +1,2 @@
+from elevated command prompt (not powershell if updating powershell):
+  winget upgrade --disable-interactivity --accept-package-agreements --accept-source-agreements --silent --all

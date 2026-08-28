@@ -18,6 +18,7 @@ colordiff
 restic
 cifs-utils
 fail2ban
+ufw
 
 ## Docker (Upstream Repo)
 docker-ce

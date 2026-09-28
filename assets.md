@@ -31,3 +31,4 @@ fzf
 chezmoi
 age
 sops
+topgrade

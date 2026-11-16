@@ -1,14 +1,20 @@
-make sure micro, git, etc.. are installed
-make sure brew, fzf, fd, chezmoi are installed
-chezmoi init (or verify already set up)
+# 1. Prerequisites
+sudo apt update && sudo apt install -y zsh zsh-autosuggestions git curl micro
+# (Ensure brew, fzf, fd, chezmoi are installed, then run: chezmoi init <github-user>)
 
-sudo apt update && sudo apt install -y zsh zsh-autosuggestions
+# 2. Oh My Zsh + Theme + Plugins
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc --unattended
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
-git clone https://github.com/zsh-users/zsh-completions.git "${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions"
+git clone --depth=1 https://github.com/zsh-users/zsh-completions.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-completions"
+
+# 3. zsh-patina (binary + OMZ wrapper)
 brew install zsh-patina
-[[ -d "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-patina" ]] || git clone --depth=1 https://github.com/michel-kraemer/zsh-patina "${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-patina"
+[[ -d "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-patina" ]] || \
+  git clone --depth=1 https://github.com/michel-kraemer/zsh-patina "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-patina"
+
+# 4. Apply dotfiles and launch Zsh
 chezmoi update
 exec zsh
 
-if all is well: chsh -s $(which zsh)
+# 5. Once verified, set Zsh as default login shell:
+# chsh -s "$(which zsh)"
